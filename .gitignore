@@ -1,0 +1,9 @@
+# OS / editor junk
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+
+# Node (only needed if you add tooling later)
+node_modules/
+npm-debug.log*

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="description" content="Neon Drift - a 3D neon endless runner built with Three.js and the Web Audio API." />
+  <title>Neon Drift</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="game"></div>
+
+  <div id="hud">
+    <div id="score">0</div>
+    <div id="meta"><span id="dist">0 m</span> &middot; best <span id="best">0</span></div>
+  </div>
+
+  <div id="overlay">
+    <h1>NEON DRIFT</h1>
+    <p id="msg">Press ENTER, SPACE or tap to start</p>
+    <p class="controls">
+      &larr; &rarr; / A D: change lane &nbsp;&middot;&nbsp; &uarr; / W / SPACE: jump<br />
+      &darr; / S: slide &nbsp;&middot;&nbsp; P / ESC: pause &nbsp;&middot;&nbsp; M: mute<br />
+      Gamepad supported &middot; Swipe on mobile
+    </p>
+  </div>
+
+  <!-- Three.js (classic build, works when opened straight from disk) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="src/audio.js"></script>
+  <script src="src/game.js"></script>
+</body>
+</html>

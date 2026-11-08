@@ -1,0 +1,111 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #05000f;
+  font-family: "Segoe UI", system-ui, -apple-system, Roboto, Helvetica, Arial, sans-serif;
+  color: #e9e1ff;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: none;
+}
+
+#game {
+  position: fixed;
+  inset: 0;
+}
+
+#game canvas {
+  display: block;
+}
+
+/* ---------- HUD ---------- */
+#hud {
+  position: fixed;
+  top: 18px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  pointer-events: none;
+  text-shadow: 0 0 12px #ff2bd6, 0 0 24px #ff2bd6;
+}
+
+#score {
+  font-size: clamp(36px, 6vw, 64px);
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #ffffff;
+}
+
+#meta {
+  margin-top: 4px;
+  font-size: clamp(13px, 2vw, 16px);
+  letter-spacing: 1px;
+  color: #00f0ff;
+  text-shadow: 0 0 10px #00f0ff;
+}
+
+/* ---------- Overlay (menu / pause / game over) ---------- */
+#overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 24px;
+  background: radial-gradient(ellipse at center, rgba(20, 0, 40, 0.55) 0%, rgba(5, 0, 15, 0.92) 75%);
+  transition: opacity 0.25s ease;
+  cursor: pointer;
+}
+
+#overlay.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+#overlay h1 {
+  font-size: clamp(44px, 9vw, 96px);
+  font-weight: 900;
+  letter-spacing: 6px;
+  background: linear-gradient(90deg, #00f0ff, #ff2bd6, #ffd23f);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 0 18px rgba(255, 43, 214, 0.6));
+  animation: pulse 2.2s ease-in-out infinite;
+}
+
+#overlay p {
+  margin-top: 18px;
+  font-size: clamp(16px, 2.4vw, 22px);
+  line-height: 1.6;
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(0, 240, 255, 0.7);
+}
+
+#overlay .controls {
+  margin-top: 36px;
+  font-size: clamp(12px, 1.8vw, 15px);
+  color: #b9a9e6;
+  text-shadow: none;
+  letter-spacing: 0.5px;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    filter: drop-shadow(0 0 12px rgba(255, 43, 214, 0.4));
+  }
+  50% {
+    filter: drop-shadow(0 0 28px rgba(0, 240, 255, 0.8));
+  }
+}
