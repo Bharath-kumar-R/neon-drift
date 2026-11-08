@@ -1,38 +1,41 @@
 # Neon Drift
 
-Neon Drift is a browser-based endless runner game inspired by the feel of high-speed neon lane runners. Built with plain HTML, CSS, and JavaScript, it uses Three.js for the 3D scene and the Web Audio API for synth-based sound effects.
+![Neon Drift](https://img.shields.io/badge/HTML5-Game-ff2bd6?style=for-the-badge&logo=html5) ![Three.js](https://img.shields.io/badge/Three.js-3D-00f0ff?style=for-the-badge&logo=three.js) ![JavaScript](https://img.shields.io/badge/JavaScript-ES6-F7DF1E?style=for-the-badge&logo=javascript) ![Web%20Audio](https://img.shields.io/badge/Web-Audio-8b5cf6?style=for-the-badge&logo=html5)
+
+Neon Drift is a fast-paced endless runner built with HTML, CSS, and JavaScript, with a stylized neon visual theme and a smooth pseudo-3D lane-based movement system. The project uses Three.js to render the scene and the Web Audio API to generate sound effects and music-like feedback.
+
+## Gameplay
+
+The player races down a glowing neon track while dodging obstacles, switching lanes, jumping over barriers, and sliding under hazards. As the run continues, the speed increases and the challenge ramps up, creating a classic arcade rhythm of survival and reaction.
 
 ## Features
 
-- Endless 3D neon track with forward motion
-- Lane switching, jumping, and sliding mechanics
-- Obstacle avoidance and increasing difficulty
-- Score tracking and best-score persistence
-- Keyboard and gamepad controls
-- Mobile-friendly touch/swipe support
-- Mute toggle and pause menu
+- Endless neon runner gameplay
+- 3D-inspired lane-based motion
+- Jump and slide actions for obstacle avoidance
+- Score and distance tracking
+- Best-score memory in the browser
+- Keyboard, gamepad, and touch controls
+- Pause, mute, and start/restart flow
+- Lightweight static web app with no install step
 
-## How to Run
+## Demo
 
-Because this project is a lightweight static web app, you can run it without a build step.
+You can run the game locally by opening the project in a browser.
 
-### Option 1: Open directly
-
-Open `index.html` in a browser.
-
-### Option 2: Use a local web server
-
-From the project root:
+### Run locally
 
 ```bash
 python -m http.server 8000
 ```
 
-Then open:
+Then visit:
 
 ```text
 http://localhost:8000
 ```
+
+You can also open `index.html` directly in a browser for quick testing.
 
 ## Controls
 
@@ -42,7 +45,7 @@ http://localhost:8000
 - P / ESC: pause
 - M: mute
 - Gamepad: supported
-- Mobile: swipe to control movement
+- Mobile: swipe to move
 
 ## Project Structure
 
@@ -53,15 +56,39 @@ http://localhost:8000
 ├── src/
 │   ├── audio.js
 │   └── game.js
-└── .vscode/
+├── .vscode/
+├── .gitignore
+└── README.md
 ```
+
+## Screenshot / Preview
+
+This project is designed to be visually striking in-browser, with a neon cyberpunk HUD and glowing track aesthetic. If you want to add a preview image to the repo, place it in a folder such as `assets/` and reference it here.
+
+Example:
+
+```md
+![Neon Drift gameplay preview](assets/neon-drift-preview.png)
+```
+
+## Tech Stack
+
+- HTML5
+- CSS3
+- JavaScript
+- Three.js
+- Web Audio API
 
 ## Notes
 
-- The game loads Three.js from a CDN, so an internet connection is required on first load.
-- No package installation or bundler setup is required.
-- This repo is intended for quick browser play and experimentation.
+- The project uses a CDN-hosted Three.js script, so an internet connection is required on first load.
+- No build step or package installation is needed.
+- This is a lightweight browser game intended for quick experimentation and local play.
 
 ## License
 
-This project does not currently include a license file. If you plan to share or reuse it publicly, consider adding an open-source license such as MIT.
+This repository does not currently include a license file. If you plan to share or reuse the project publicly, consider adding an open-source license like MIT.
+
+## Contributing
+
+Contributions are welcome. If you want to improve gameplay, visuals, controls, or sound design, feel free to fork the repository and submit a pull request.
